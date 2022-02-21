@@ -4,15 +4,19 @@ var licenseLink = "";
 var licenseSection = "";
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  console.log(license);
-  return licenseBadge;
+function renderLicenseBadge(data) {
+  if (data.license === "None") {
+    licenseBadge = "";
+  } else
+    licenseBadge = `https://img.shields.io/badge/${license}-License#3A%20${license}-orange`;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  return licenseLink;
+function renderLicenseLink(data) {
+  if (data.license === "None") {
+    licenseLink = "";
+  } else licenseLink = `https://choosealicense.com/licenses/${license}/`;
 }
 
 // TODO: Create a function that returns the license section of README
@@ -32,6 +36,8 @@ function generateMarkdown(data) {
   renderLicenseLink(data.license);
   renderLicenseSection(data.license);
   return `# ${data.title}
+
+![badge](${licenseBadge})
 
 ## Table of Contents
 
@@ -61,7 +67,9 @@ ${data.contribution}
 *Tests used in development and how to run them*
 ${data.tests}
 
+${licenseBadge}
 ${licenseSection}
+${licenseLink}
 
 
 ## Questions
