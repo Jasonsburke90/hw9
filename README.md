@@ -12,3 +12,4 @@ https://drive.google.com/file/d/1USpt1i4LL_IVKkPQF9zPga6EZ1bpadio/view
 ## Link to the Repo
 
 \* Here is the link to the repo [jasonburke/repo] (https://github.com/Jasonsburke90/hw9)
+Here is the link to an example readme: https://drive.google.com/file/d/1d8_PHgDHHDaCwDGBA4vIFutmYXnmrYpv/view?usp=sharing
