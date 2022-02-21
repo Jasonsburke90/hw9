@@ -3,9 +3,16 @@
 const inquirer = require("inquirer");
 // fs for file writing
 const fs = require("fs");
+// require generateMarkdown
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
   {
     type: "input",
     name: "description",
@@ -49,7 +56,18 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  // initialize inquirer prompts
+  inquirer.prompt(questions).then(
+    (response) => {
+      console.log(response);
+      const markdown = generateMarkdown(response);
+      console.log(markdown);
+    }
+
+    // send inquirer responses to generateMarkdown.js file
+  );
+}
 
 // Function call to initialize app
 init();
