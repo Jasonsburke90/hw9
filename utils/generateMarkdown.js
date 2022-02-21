@@ -26,12 +26,12 @@ function generateMarkdown(data) {
 ## Table of Contents
 
  - [Description](#description)
- -[Installation](#installation)
- -[Instructions](#instructions)
- -[Contribution](#contribution)
- -[Tests](#tests)
- -[License](#license)
- -[Questions](#questions)
+ - [Installation](#installation)
+ - [Instructions](#instructions)
+ - [Contribution](#contribution)
+ - [Tests](#tests)
+ - [License](#license)
+ - [Questions](#questions)
  
   
 ## Description
