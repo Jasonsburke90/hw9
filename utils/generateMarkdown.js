@@ -1,9 +1,11 @@
-const licenseBadge = "";
-const licenseLink = "";
-const licenseSection = "";
+var license = [];
+var licenseBadge = "";
+var licenseLink = "";
+var licenseSection = "";
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log(license);
   return licenseBadge;
 }
 
@@ -15,12 +17,20 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  return licenseSection;
+function renderLicenseSection(data) {
+  if (data.license === "None") {
+    licenseSection = "";
+  } else
+    licenseSection = `## License 
+    This application is covered under ${license}`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  license += data.license;
+  renderLicenseBadge(data.license);
+  renderLicenseLink(data.license);
+  renderLicenseSection(data.license);
   return `# ${data.title}
 
 ## Table of Contents
@@ -45,16 +55,14 @@ ${data.usage}
 
 ## Contribution
 *If you would like to contribute to this project, here are instructions for doing so.*
-
 ${data.contribution}
 
 ## Tests
 *Tests used in development and how to run them*
-
 ${data.tests}
 
-## License 
-This application is covered under ${data.license}
+${licenseSection}
+
 
 ## Questions
 For any questions contact me at the info below.
