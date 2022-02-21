@@ -50,6 +50,12 @@ const questions = [
     message:
       "What is your email address in case anyone wishes to contact you with questions about your project?",
   },
+  {
+    type: "list",
+    name: "license",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+    message: "Which license do you wish to use for this project?",
+  },
 ];
 
 // TODO: Create a function to write README file
