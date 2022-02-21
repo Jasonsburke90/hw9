@@ -18,6 +18,30 @@ function generateMarkdown(data) {
   
 ## Description
 ${data.description}
+
+## Installation Instructions
+${data.installation}
+
+## Instructions and Examples for Use
+${data.usage}
+
+## Contribution
+*If you would like to contribute to this project, here are instructions for doing so.
+${data.contribution}
+
+## Tests
+*Tests used in development and how to run them
+${data.tests}
+
+## License 
+// add license
+
+## Questions
+For any questions contact me at the info below.
+github.com/${data.githubName}
+Or reach me via email at:
+${data.emailAddress}
+$
 `;
 }
 
