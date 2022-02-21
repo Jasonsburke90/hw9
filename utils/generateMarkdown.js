@@ -67,7 +67,6 @@ ${data.contribution}
 *Tests used in development and how to run them*
 ${data.tests}
 
-${licenseBadge}
 ${licenseSection}
 ${licenseLink}
 
